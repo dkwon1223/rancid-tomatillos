@@ -1,9 +1,8 @@
 import Movie from './Movie';
 import './MoviesArea.css';
 import './MovieDetails.css';
-import { useState } from "react";
 
-function MoviesArea({ movies, getDetails, getMovieDetails }){
+function MoviesArea({ movies, getMovieDetails }){
 
     const allMovies = movies.map(movie => {
         return (
@@ -12,7 +11,6 @@ function MoviesArea({ movies, getDetails, getMovieDetails }){
                 posterPath={movie.poster_path}                
                 title={movie.title}
                 key={movie.id}
-                getDetails={getDetails}
                 getMovieDetails={getMovieDetails}
             />
         )
