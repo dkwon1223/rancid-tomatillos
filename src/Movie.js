@@ -1,12 +1,11 @@
 import './Movie.css';
-import getDetails from "./Movie"
 
-function Movie({ posterPath, title, getDetails }){
+function Movie({ posterPath, title, findMovie }){
     return (
         <div className="movie-card">
             <img src={posterPath} />
             <h2>{title}</h2> 
-            <button onClick={getDetails}>See Movie Details</button>
+            <button onClick={findMovie}>See Movie Details</button>
         </div>
     )
 }
