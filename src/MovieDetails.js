@@ -1,10 +1,11 @@
 import './MovieDetails.css';
 
-function MovieDetails({ returnToHome }){
-
+function MovieDetails({ returnToHome, movie }){
+    console.log(movie)
     return (
         <section className="detail-container">
-            <h1>TEST</h1>
+            <h1>{movie.title}</h1>
+            <img src={movie.backdrop_path}/>
             <button onClick={returnToHome}>Back to Homepage</button> 
         </section>
     )

@@ -3,7 +3,7 @@ import './MoviesArea.css';
 import './MovieDetails.css';
 import { useState } from "react";
 
-function MoviesArea({ movies, getDetails, findMovie, getSingleMovie }){
+function MoviesArea({ movies, getDetails, getMovieDetails }){
 
     const allMovies = movies.map(movie => {
         return (
@@ -13,8 +13,7 @@ function MoviesArea({ movies, getDetails, findMovie, getSingleMovie }){
                 title={movie.title}
                 key={movie.id}
                 getDetails={getDetails}
-                findMovie={findMovie}
-                getSingleMovie={getSingleMovie}
+                getMovieDetails={getMovieDetails}
             />
         )
     })
