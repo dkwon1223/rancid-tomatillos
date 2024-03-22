@@ -1,4 +1,5 @@
 import Movie from './Movie';
+import './MoviesArea.css';
 function MoviesArea({ movies }){
     const allMovies = movies.map(movie => {
         return (
