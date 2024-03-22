@@ -10,21 +10,21 @@ function App() {
   const [movie, setMovie] = useState([])
   const [details, setDetails] = useState(false);
  
-        function returnToHome(){
-          setDetails(false)
-      }
-      function getMovieDetails(id){
-        let singleMovie = movies.find(movie => movie.id === id)
-        setDetails(true)
-        setMovie(singleMovie)
-      }
+  function returnToHome(){
+    setDetails(false)
+  }
+
+  function getMovieDetails(id){
+    let singleMovie = movies.find(movie => movie.id === id)
+    setDetails(true)
+    setMovie(singleMovie)
+  }
 
   return (
     <main className='App'>
       <Navbar />
       {details ? <MovieDetails movie={movie} returnToHome={returnToHome}/> : <MoviesArea getMovieDetails={getMovieDetails} movies={movies} />}
     </main>
-
   )
 }
 

@@ -1,7 +1,6 @@
 import './MovieDetails.css';
 
 function MovieDetails({ returnToHome, movie }){
-    console.log(movie)
     return (
         <section className="detail-container">
             <h1>{movie.title}</h1>
