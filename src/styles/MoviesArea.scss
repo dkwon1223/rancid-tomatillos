@@ -1,6 +1,9 @@
 @import 'mixins';
+@import 'variables';
 
 .movie-container {
     @include movie-area();
+    height: 85%;
+    overflow-y: auto;
 }
 

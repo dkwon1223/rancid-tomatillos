@@ -18,12 +18,19 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 0;
+    background-color: $background-grey;
 }
 
 @mixin movie-card() {
     @include flex-centered-column();
     height: 100%;
     width: 100%;
+    cursor: pointer;
+    img:hover,
+    img:focus {
+      transform: translate(-9px, -9px);
+      box-shadow: 20px 20px $background-black;
+    }
 
     .movie-card-image {
         width: 95%;

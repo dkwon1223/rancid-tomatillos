@@ -2,9 +2,9 @@
 @import 'variables';
 
 .nav {
-    height: 20%;
+    height: 15%;
     width: 100%;
-    margin: 0;
+    margin-top: 0;
     margin-bottom: 2%;
     background-color: $darker-red;
     display: flex;
@@ -14,10 +14,10 @@
     @include flex-centered-row();
     justify-content: flex-start;
     h1 {
-        font-size: xx-large;
+        font-size: x-large;
     }
     img {
-        width: 7%;
+        width: 5%;
         transform: rotate(20deg);
         margin-left: 3%; 
     }
@@ -38,16 +38,5 @@
         border: none;
         text-align: center;
         margin-right: 1%;
-    }
-}
-
-.nav-search-button {
-    height: 60%;
-    width: 10%;
-    background-color: $darker-red;
-    border: none;
-    cursor: pointer;
-    img {
-        width: 80%;
     }
 }
