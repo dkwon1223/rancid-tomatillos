@@ -7,6 +7,8 @@ function MoviesArea({ movies }){
                 posterPath={movie.poster_path}                
                 title={movie.title}
                 key={movie.id}
+                average_rating={movie.average_rating}
+                release_date={movie.release_date}
             />
         )
     })

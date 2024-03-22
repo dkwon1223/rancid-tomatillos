@@ -1,7 +1,7 @@
 .movie-container {
-    height: 90%;
+    margin-top: 5%;
+    height: 80%;
     width: 100%;
-    border: 2px solid black;
     display: grid;
     overflow-y: auto;
     grid-template-columns: repeat(3, 1fr);

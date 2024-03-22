@@ -2,6 +2,8 @@ import './Navbar.css';
 
 export default function Navbar() {
     return (
-        <h1 className="nav">Navbar</h1>
+        <nav className="nav">
+            <h1>Rancid Tomatillos</h1>
+        </nav>
     )
 }

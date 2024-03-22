@@ -1,9 +1,24 @@
 .movie-card {
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
 }
 
-img {
+.movie-card-image {
     width: 70%;
     height: 80%;
 }
+
+.movie-card-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-year {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
