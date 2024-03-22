@@ -1,0 +1,8 @@
+@import 'mixins';
+
+.movie-card {
+    @include movie-card();
+}
+
+
+

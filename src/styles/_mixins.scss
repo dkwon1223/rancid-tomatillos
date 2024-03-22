@@ -1,0 +1,55 @@
+@mixin flex-centered-row() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-centered-column() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin movie-area() {
+    margin-top: 5%;
+    height: 80%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0;
+}
+
+@mixin movie-card() {
+    @include flex-centered-column();
+    height: 100%;
+    width: 100%;
+
+    .movie-card-image {
+        width: 95%;
+        height: 85%;
+    }
+    
+    .movie-card-details {
+        @include flex-centered-row();
+        width: 90%;
+        height: 5%;
+        margin-top: 5%;
+        justify-content: space-between;
+        h2, h3 {
+            margin: 0;
+            font-size: larger;
+        }
+        h2 {
+            text-align: left;
+        }
+        .movie-card-rating {
+            width: 15%;
+            @include flex-centered-row();
+            text-align: right;
+        }
+        .star-logo {
+            width: 30%;
+        }
+    }
+}

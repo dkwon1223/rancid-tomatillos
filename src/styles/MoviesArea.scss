@@ -1,0 +1,6 @@
+@import 'mixins';
+
+.movie-container {
+    @include movie-area();
+}
+

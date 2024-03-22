@@ -1,0 +1,8 @@
+@import 'mixins';
+
+.App {
+  @include flex-centered-column();
+  text-align: center;
+  background-color: black;
+  color: white;
+}

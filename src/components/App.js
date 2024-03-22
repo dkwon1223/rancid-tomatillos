@@ -1,8 +1,8 @@
-import './App.css';
+import '../styles/App.scss';
 import Navbar from './Navbar';
 import MoviesArea from './MoviesArea';
 import { useState } from "react";
-import movieData from './movieData';
+import movieData from '../movieData';
 
 function App() {
   const [movies, setMovies] = useState(movieData.movies)
