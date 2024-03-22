@@ -1,8 +1,8 @@
 @import 'mixins';
+@import 'variables';
 
 .App {
   @include flex-centered-column();
-  text-align: center;
-  background-color: black;
+  background-color: $background-grey;
   color: white;
 }

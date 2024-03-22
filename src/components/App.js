@@ -9,10 +9,9 @@ function App() {
 
   return (
     <main className='App'>
-      <Navbar />
+      <Navbar movies={movies} setMovies={setMovies}/>
       <MoviesArea movies={movies}/>
     </main>
-
   )
 }
 
