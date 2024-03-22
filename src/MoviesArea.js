@@ -1,16 +1,9 @@
 import Movie from './Movie';
 import './MoviesArea.css';
 import './MovieDetails.css';
-import MovieDetails from './MovieDetails';
 import { useState } from "react";
 
-function MoviesArea({ movies, getDetails, findMovie }){
-    // const [details, setDetails] = useState(false);
-    
-    // function findMovie(){
-    //       setDetails(true)
-       
-    //     }
+function MoviesArea({ movies, getDetails, findMovie, getSingleMovie }){
 
     const allMovies = movies.map(movie => {
         return (
@@ -21,13 +14,11 @@ function MoviesArea({ movies, getDetails, findMovie }){
                 key={movie.id}
                 getDetails={getDetails}
                 findMovie={findMovie}
+                getSingleMovie={getSingleMovie}
             />
         )
     })
 
-    // function returnToHome(){
-    //     setDetails(false)
-    // }
     return (
         <div className='movie-container'>
             {allMovies}

@@ -1,8 +1,9 @@
+import './MovieDetails.css';
 
 function MovieDetails({ returnToHome }){
 
     return (
-        <section>
+        <section className="detail-container">
             <h1>TEST</h1>
             <button onClick={returnToHome}>Back to Homepage</button> 
         </section>
