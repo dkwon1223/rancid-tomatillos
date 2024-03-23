@@ -1,0 +1,5 @@
+@import 'mixins';
+
+.detail-container { 
+  @include flex-centered-column();
+}

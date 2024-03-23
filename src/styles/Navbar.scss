@@ -23,20 +23,4 @@
     }
 }
 
-.nav-options {
-    @include flex-centered-row();
-    width: 65%;
-    label {
-        font-weight: 600;
-        font-size: larger;
-    }
-    input {
-        margin-left: 3%;
-        width: 50%;
-        height: 40%;
-        border-radius: 1rem;
-        border: none;
-        text-align: center;
-        margin-right: 1%;
-    }
-}
+
