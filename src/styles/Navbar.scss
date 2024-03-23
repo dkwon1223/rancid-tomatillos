@@ -1,0 +1,25 @@
+@import 'mixins';
+@import 'variables';
+
+.nav {
+    height: 15%;
+    width: 100%;
+    margin-top: 0;
+    background-color: $darker-red;
+    display: flex;
+}
+
+.nav-logo {
+    @include flex-centered-row();
+    justify-content: flex-start;
+    h1 {
+        font-size: x-large;
+    }
+    img {
+        width: 5%;
+        transform: rotate(20deg);
+        margin-left: 3%; 
+    }
+}
+
+
