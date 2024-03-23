@@ -3,7 +3,6 @@ import './MoviesArea.css';
 import './MovieDetails.css';
 
 function MoviesArea({ movies, getMovieDetails }){
-
     const allMovies = movies.map(movie => {
         return (
             <Movie 
