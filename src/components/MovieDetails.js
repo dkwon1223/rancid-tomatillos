@@ -1,4 +1,4 @@
-import './MovieDetails.css';
+import '../styles/MovieDetails.scss';
 
 function MovieDetails({ returnToHome, movie }){
     return (

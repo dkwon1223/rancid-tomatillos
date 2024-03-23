@@ -1,11 +1,11 @@
 import '../styles/App.scss';
-import Navbar from './Navbar';
-import MoviesArea from './MoviesArea';
+import Navbar from '../components/Navbar';
+import MoviesArea from '../components/MoviesArea';
+import MovieDetails from '../components/MovieDetails';
+import movieData from '../movieData';
 import { useState } from "react";
-import movieData from './movieData';
-import MovieDetails from './MovieDetails';
 
-function App() {
+export default function App() {
   const [movies, setMovies] = useState(movieData.movies)
   const [movie, setMovie] = useState([])
   const [details, setDetails] = useState(false);
@@ -28,4 +28,4 @@ function App() {
   )
 }
 
-export default App;
+
