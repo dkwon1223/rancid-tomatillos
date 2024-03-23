@@ -1,9 +1,9 @@
 import '../styles/Movie.scss';
 import StarLogo from '../assets/star-icon.svg';
 
-function Movie({ posterPath, title, id, average_rating, release_date, displayMovie }){
+function Movie({ posterPath, title, id, average_rating, release_date }){
     return (
-        <div className="movie-card" onClick={() => displayMovie(id)}>
+        <div className="movie-card">
             <img src={posterPath} className="movie-card-image"/>
             <aside className="movie-card-details">
                 <h2>{title} ({release_date.slice(0,4)})</h2>

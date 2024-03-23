@@ -1,6 +1,6 @@
 import Movie from './Movie';
 import '../styles/MoviesArea.scss';
-function MoviesArea({ movies, displayMovie }){
+function MoviesArea({ movies }){
     const allMovies = movies.map(movie => {
         return (
             <Movie 
@@ -10,7 +10,6 @@ function MoviesArea({ movies, displayMovie }){
                 key={movie.id}
                 average_rating={movie.average_rating}
                 release_date={movie.release_date}
-                displayMovie={displayMovie}
             />
         )
     })
