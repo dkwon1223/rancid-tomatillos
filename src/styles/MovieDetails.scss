@@ -1,5 +1,11 @@
 @import 'mixins';
 
 .detail-container { 
+  height: 85%;
+  width: 100%;
   @include flex-centered-column();
+  img {
+    height: 70%;
+    width: 60%;
+  }
 }
