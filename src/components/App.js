@@ -6,10 +6,17 @@ import movieData from '../movieData';
 import { useState } from "react";
 
 export default function App() {
-  const [movies, setMovies] = useState(movieData.movies)
+  const [movies, setMovies] = useState([])
   const [movie, setMovie] = useState([])
   const [details, setDetails] = useState(false);
- 
+
+  function getAllMovies(){
+    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
+    .then(response => response.json())
+    .then(data => setMovies([...data.movies]))
+  }
+ getAllMovies()
+
   function returnToHome(){
     setDetails(false)
   }
