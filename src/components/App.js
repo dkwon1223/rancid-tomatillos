@@ -8,12 +8,15 @@ export default function App() {
   const [movies, setMovies] = useState([])
   const [movie, setMovie] = useState({})
   const [details, setDetails] = useState(false);
+  const [error, setError] = useState('')
  
   function getAllMovies(){
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
+    fetch('https://racid-tomatillos.herokuapp.com/api/v2/movies')
     .then(response => response.json())
     .then(data => setMovies([...data.movies]))
+    .catch(error => setError('Oops! Something went wrong. Please try again.'))
   }
+
   useEffect(() => {
      getAllMovies()
   }, [])
@@ -34,6 +37,7 @@ export default function App() {
     <main className='App'>
       <Navbar />
       {details ? <MovieDetails movie={movie} returnToHome={returnToHome}/> : <MoviesArea getSingleMovie={getSingleMovie} movies={movies} />}
+      {error && <h2>{error}</h2>}
     </main>
   )
 }
