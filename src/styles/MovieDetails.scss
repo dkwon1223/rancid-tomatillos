@@ -18,11 +18,19 @@
     left: 1%;
     @include flex-centered-column();
     align-items: flex-start;
-    width: 40%;
-    height: 90%;
+    width: 30%;
+    height: 100%;
+  }
+  .movie-star-rating {
+    height: 30px;
+    margin-bottom: 3%;
+  }
+  p {
+    margin: 1%;
   }
   h1 {
-    margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 5%;
     font-size: xxx-large;
   }
   h2 {
@@ -30,6 +38,9 @@
   }
   h3 {
     font-size: medium;
+  }
+  .movie-overview {
+    margin-bottom: 10%;
   }
   button {
     cursor: pointer;
@@ -39,7 +50,7 @@
     border-radius: 1rem;
     font-size: large;
     font-weight: 600;
-    width: 30%;
+    width: 35%;
   }
   .genre {
     margin: 0;

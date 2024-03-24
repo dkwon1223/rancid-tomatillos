@@ -2,7 +2,7 @@ import Movie from './Movie';
 import '../styles/MoviesArea.scss';
 import '../styles/MovieDetails.scss';
 
-function MoviesArea({ movies, getMovieDetails }){
+export default function MoviesArea({ movies, getMovieDetails }){
     const allMovies = movies.map(movie => {
         return (
             <Movie 
@@ -24,4 +24,3 @@ function MoviesArea({ movies, getMovieDetails }){
     )
 }
 
-export default MoviesArea; 

@@ -1,7 +1,7 @@
 import '../styles/Movie.scss';
 import StarLogo from '../assets/star-icon.svg';
 
-function Movie({ posterPath, title, id, getMovieDetails, release_date, average_rating }){
+export default function Movie({ posterPath, title, id, getMovieDetails, release_date, average_rating }){
     return (
         <div className="movie-card" onClick={() => getMovieDetails(id)}>
             <img src={posterPath} className="movie-card-image"/>
@@ -16,4 +16,3 @@ function Movie({ posterPath, title, id, getMovieDetails, release_date, average_r
     )
 }
 
-export default Movie; 

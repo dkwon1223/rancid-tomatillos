@@ -2,8 +2,7 @@ import '../styles/App.scss';
 import Navbar from '../components/Navbar';
 import MoviesArea from '../components/MoviesArea';
 import MovieDetails from '../components/MovieDetails';
-import movieData from '../movieData';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function App() {
   const [movies, setMovies] = useState([])
@@ -26,7 +25,10 @@ export default function App() {
             })
   }
 
-  getAllMovies();
+  useEffect(() => {
+    getAllMovies();
+  }, []);
+  
 
   function returnToHome(){
     setDetails(false);
