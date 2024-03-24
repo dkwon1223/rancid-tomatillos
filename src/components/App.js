@@ -4,6 +4,7 @@ import MoviesArea from '../components/MoviesArea';
 import MovieDetails from '../components/MovieDetails';
 import ErrorMessage from './ErrorMessage';
 import { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 
 export default function App() {
   const [movies, setMovies] = useState([])
@@ -63,7 +64,7 @@ export default function App() {
     <main className='App'>
       <Navbar filteredMoves={filteredMovies} setFilteredMovies={setFilteredMovies}/>
       {details ? <MovieDetails movie={movie} returnToHome={returnToHome}/> : <MoviesArea getMovieDetails={getMovieDetails} movies={searchMovie} />}
-      {error !== null && <ErrorMessage error={error} errorStatus={errorStatus} />}
+      {error && <ErrorMessage error={error} errorStatus={errorStatus} />}
     </main>
   )
 }

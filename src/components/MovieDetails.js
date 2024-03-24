@@ -1,5 +1,6 @@
 import '../styles/MovieDetails.scss';
 import ReactStars from 'react-stars';
+import PropTypes from 'prop-types';
 
 export default function MovieDetails({ returnToHome, movie }){
     return (
