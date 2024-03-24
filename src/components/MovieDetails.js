@@ -2,7 +2,7 @@ import '../styles/MovieDetails.scss';
 import PropTypes from 'prop-types';
 
 export default function MovieDetails({ returnToHome, movie }){
-    console.log(movie)
+ 
     return (
         <section className="detail-container">
             <h1 className='title'>{movie.title}</h1>
