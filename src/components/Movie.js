@@ -1,5 +1,6 @@
 import '../styles/Movie.scss';
 import StarLogo from '../assets/star-icon.svg';
+import PropTypes from 'prop-types';
 
 function Movie({ posterPath, title, id, getSingleMovie, release_date, average_rating }){
     return (
@@ -14,6 +15,15 @@ function Movie({ posterPath, title, id, getSingleMovie, release_date, average_ra
             </aside>
         </div>
     )
+}
+
+Movie.propTypes = {
+    posterPath: PropTypes.string.isRequired, 
+    title: PropTypes.string.isRequired, 
+    id: PropTypes.number.isRequired, 
+    getSingleMovie: PropTypes.func.isRequired, 
+    release_date: PropTypes.string.isRequired, 
+    average_rating: PropTypes.number.isRequired
 }
 
 export default Movie; 

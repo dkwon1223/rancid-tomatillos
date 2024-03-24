@@ -1,4 +1,5 @@
 import '../styles/MovieDetails.scss';
+import PropTypes from 'prop-types';
 
 function MovieDetails({ returnToHome, movie }){
     return (
@@ -9,6 +10,10 @@ function MovieDetails({ returnToHome, movie }){
             <button onClick={returnToHome}>Back to Homepage</button> 
         </section>
     )
+}
+
+MovieDetails.propTypes = {
+    returnToHome: PropTypes.func.isRequired,
 }
 
 export default MovieDetails;

@@ -1,6 +1,7 @@
 import Movie from './Movie';
 import '../styles/MoviesArea.scss';
 import '../styles/MovieDetails.scss';
+import PropTypes from 'prop-types';
 
 function MoviesArea({ movies, getSingleMovie }){
 
@@ -23,6 +24,15 @@ function MoviesArea({ movies, getSingleMovie }){
             {allMovies}
         </div>
     )
+}
+
+Movie.propTypes = {
+        id: PropTypes.number.isRequired, 
+        posterPath: PropTypes.string.isRequired, 
+        title: PropTypes.string.isRequired, 
+        getSingleMovie: PropTypes.func.isRequired, 
+        release_date: PropTypes.string.isRequired, 
+        average_rating: PropTypes.number.isRequired
 }
 
 export default MoviesArea; 
