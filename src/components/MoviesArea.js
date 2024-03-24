@@ -4,6 +4,7 @@ import '../styles/MovieDetails.scss';
 import PropTypes from 'prop-types';
 
 export default function MoviesArea({ movies, getMovieDetails }){
+export default function MoviesArea({ movies, getMovieDetails }){
     const allMovies = movies.map(movie => {
         return (
             <Movie 
@@ -14,6 +15,7 @@ export default function MoviesArea({ movies, getMovieDetails }){
                 getMovieDetails={getMovieDetails}
                 release_date={movie.release_date}
                 average_rating={movie.average_rating}
+            />  
             />  
         )
     })
