@@ -2,6 +2,7 @@ import '../styles/App.scss';
 import Navbar from '../components/Navbar';
 import MoviesArea from '../components/MoviesArea';
 import MovieDetails from '../components/MovieDetails';
+import ErrorMessage from './ErrorMessage';
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -42,7 +43,7 @@ export default function App() {
             .then(response => {
               if(!response.ok) {
                 setErrorStatus(response.status);
-                throw new Error(`Unable to retrieve movie - ID(${id}). Try again later.`); 
+                throw new Error(`Unable to retrieve movie - ID(${id}). Try again later.`);
               }
               return response.json();
             })
@@ -51,14 +52,15 @@ export default function App() {
               setMovie(data.movie);
             })
             .catch(error => {
-              setError(error.messsage);
+              setError(error.message);
             })
   }
 
   return (
     <main className='App'>
-      {error ? <h1 className='error-message'>{error}<br/>STATUS CODE {errorStatus}</h1> : <Navbar /> }
+      <Navbar />
       {details ? <MovieDetails movie={movie} returnToHome={returnToHome}/> : <MoviesArea getMovieDetails={getMovieDetails} movies={movies} />}
+      {error !== null && <ErrorMessage error={error} errorStatus={errorStatus} />}
     </main>
   )
 }
