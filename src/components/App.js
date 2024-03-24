@@ -14,12 +14,15 @@ export default function App() {
  
   function getAllMovies(){
     fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-    .then(response => 
+    .then(response => {
       if(!response.ok){
-        
+        let responseText = response.statusText
+        let responseCode = response.status
+        setError(`${responseCode} - ${responseText}`)
       } else {
         return response.json()
-      })
+      }
+    })
     .then(data => setMovies([...data.movies]))
     .catch(error => setError('Oops! Something went wrong. Please try again.'))
   }
@@ -36,7 +39,15 @@ export default function App() {
     setDetails(true)
     let singleMovie = movies.find(movie => movie.id === id)
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${singleMovie.id}`)
-    .then(response => response.json())
+    .then(response => {
+      if(!response.ok){
+        let responseText = response.statusText
+        let responseCode = response.status
+        setError(`${responseCode} - ${responseText}`)
+      } else {
+        return response.json()
+      }
+    })
     .then(data => setMovie(data.movie))
     .catch(error => setError('Unable to get movie details at this time. Please try again.'))
   }

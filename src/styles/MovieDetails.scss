@@ -19,14 +19,20 @@
 
 .movie-overview {
   width: 60%; 
+  margin-top: 1%; 
 }
 
 .tagline {
   margin-top: .5%;
+  margin-bottom: 1.5%; 
   font-style: italic;
 }
 
 button {
   margin-bottom: 2%;
   padding: .5%; 
+}
+
+p {
+  margin-top: 0; 
 }

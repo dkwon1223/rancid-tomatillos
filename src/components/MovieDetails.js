@@ -7,7 +7,7 @@ export default function MovieDetails({ returnToHome, movie }){
         <section className="detail-container">
             <h1 className='title'>{movie.title}</h1>
             <h3 className='tagline'>{movie.tagline}</h3>
-            {/* <p>{movie.release_date.slice(0,4)} | {movie.genres.join(', ')} | {movie.runtime}m</p> */}
+            <p>{movie.release_date.slice(0,4)} | {movie.genres.join(', ')} | {movie.runtime}m</p>
             <img src={movie.backdrop_path}/>
             <p className='movie-overview'>{movie.overview}</p>
             <button onClick={returnToHome}>Back to Homepage</button> 
