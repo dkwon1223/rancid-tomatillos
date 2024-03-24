@@ -25,7 +25,6 @@
     @include flex-centered-column();
     height: 100%;
     width: 100%;
-    cursor: pointer;
     img:hover,
     img:focus {
       transform: translate(-9px, -9px);
@@ -35,6 +34,8 @@
     .movie-card-image {
         width: 95%;
         height: 85%;
+        cursor: pointer; 
+        border-radius: 10px; 
     }
     
     .movie-card-details {
