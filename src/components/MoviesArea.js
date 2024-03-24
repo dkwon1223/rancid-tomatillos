@@ -13,7 +13,7 @@ export default function MoviesArea({ movies, getMovieDetails }){
                 getMovieDetails={getMovieDetails}
                 release_date={movie.release_date}
                 average_rating={movie.average_rating}
-            />
+            />  
         )
     })
 
