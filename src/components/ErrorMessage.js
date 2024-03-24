@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/ErrorMessage.scss';
+import PropTypes from 'prop-types';
 
 export default function ErrorMessage({ error, errorStatus }) {
   return (
@@ -10,3 +11,7 @@ export default function ErrorMessage({ error, errorStatus }) {
   )
 }
 
+ErrorMessage.propTypes = {
+  error: PropTypes.string.isRequired,
+  errorStatus: PropTypes.string.isRequired
+}
