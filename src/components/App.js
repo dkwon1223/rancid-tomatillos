@@ -14,7 +14,12 @@ export default function App() {
  
   function getAllMovies(){
     fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-    .then(response => response.json())
+    .then(response => 
+      if(!response.ok){
+        
+      } else {
+        return response.json()
+      })
     .then(data => setMovies([...data.movies]))
     .catch(error => setError('Oops! Something went wrong. Please try again.'))
   }

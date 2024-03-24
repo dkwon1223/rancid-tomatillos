@@ -7,4 +7,5 @@
   @include flex-centered-column();
   background-color: $background-grey;
   color: white;
+  overflow-y: auto;
 }
