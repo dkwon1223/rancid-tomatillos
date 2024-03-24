@@ -27,8 +27,8 @@
     height: 100%;
     width: 100%;
     cursor: pointer;
-    img:hover,
-    img:focus {
+    .movie-card-image:hover,
+    .movie-card-image:focus {
       transform: translate(-9px, -9px);
       box-shadow: 20px 20px $background-black;
     }
