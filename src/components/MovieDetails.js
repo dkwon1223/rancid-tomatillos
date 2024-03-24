@@ -3,7 +3,6 @@ import ReactStars from 'react-stars';
 import PropTypes from 'prop-types';
 
 export default function MovieDetails({ returnToHome, movie }){
-export default function MovieDetails({ returnToHome, movie }){
     return (
         <section className="detail-container">
             <article>
