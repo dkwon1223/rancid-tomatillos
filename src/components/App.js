@@ -15,7 +15,7 @@ export default function App() {
   const [filteredMovies, setFilteredMovies] = useState('');
 
   async function getAllMovies() {
-    await fetch("https://rancid-tomatillos.herokuapp.com/api/v2/moies")
+    await fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")
             .then(response => {
               if(!response.ok) {
                 setErrorStatus(response.status);
