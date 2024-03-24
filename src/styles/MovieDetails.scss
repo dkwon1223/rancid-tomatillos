@@ -1,11 +1,47 @@
 @import 'mixins';
+@import 'variables';
 
 .detail-container { 
-  height: 85%;
+  background-color: black;
+  height: 100%;
   width: 100%;
-  @include flex-centered-column();
+  display: flex;
+  justify-content: end;
   img {
-    height: 70%;
-    width: 60%;
+    height: 100%;
+    width: 90%;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.99) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.99) 100%);
+  }
+  article {
+    position: absolute;
+    left: 1%;
+    @include flex-centered-column();
+    align-items: flex-start;
+    width: 40%;
+    height: 90%;
+  }
+  h1 {
+    margin-bottom: 0;
+    font-size: xxx-large;
+  }
+  h2 {
+    font-size: medium;
+  }
+  h3 {
+    font-size: medium;
+  }
+  button {
+    cursor: pointer;
+    color: white;
+    background-color: $primary-red;
+    border: none;
+    border-radius: 1rem;
+    font-size: large;
+    font-weight: 600;
+    width: 30%;
+  }
+  .genre {
+    margin: 0;
   }
 }
