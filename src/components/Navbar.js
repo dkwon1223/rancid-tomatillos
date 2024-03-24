@@ -1,7 +1,9 @@
 import '../styles/Navbar.scss';
 import TomatilloIcon from '../assets/tomatillo-icon.svg';
+import PropTypes from 'prop-types';
 
 export default function Navbar({ search, setSearch }) {
+
     return (
         <nav className="nav">
             <div className='nav-logo'> 
@@ -15,4 +17,9 @@ export default function Navbar({ search, setSearch }) {
          
         </nav>
     )
+}
+
+Navbar.propTypes = {
+    search: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+    setSearch: PropTypes.func.isRequired
 }
