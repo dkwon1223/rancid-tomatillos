@@ -33,3 +33,4 @@ MovieDetails.propTypes = {
     returnToHome: PropTypes.func.isRequired,
     movie: PropTypes.object.isRequired
 }
+

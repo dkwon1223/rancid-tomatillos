@@ -12,10 +12,10 @@ export default function App() {
   const [details, setDetails] = useState(false);
   const [error, setError] = useState(null);
   const [errorStatus, setErrorStatus] = useState(null)
-  const [filteredMovies, setFilteredMovies] = useState('')
- 
+  const [filteredMovies, setFilteredMovies] = useState('');
+
   async function getAllMovies() {
-    await fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")
+    await fetch("https://rancid-tomatillos.herokuapp.com/api/v2/moies")
             .then(response => {
               if(!response.ok) {
                 setErrorStatus(response.status);
@@ -62,7 +62,7 @@ export default function App() {
 
   return (
     <main className='App'>
-      <Navbar filteredMoves={filteredMovies} setFilteredMovies={setFilteredMovies}/>
+      <Navbar filteredMovies={filteredMovies} setFilteredMovies={setFilteredMovies}/>
       {details ? <MovieDetails movie={movie} returnToHome={returnToHome}/> : <MoviesArea getMovieDetails={getMovieDetails} movies={searchMovie} />}
       {error && <ErrorMessage error={error} errorStatus={errorStatus} />}
     </main>
@@ -75,6 +75,11 @@ MovieDetails.propTypes = {
 }
 
 MoviesArea.propTypes = {
-  getSingleMovie: PropTypes.func.isRequired, 
+  getMovieDetails: PropTypes.func.isRequired, 
   movies: PropTypes.array.isRequired
+}
+
+Navbar.propTypes = {
+  filteredMovies: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  setFilteredMovies: PropTypes.func.isRequired
 }

@@ -29,7 +29,7 @@ Movie.propTypes = {
         id: PropTypes.number.isRequired, 
         posterPath: PropTypes.string.isRequired, 
         title: PropTypes.string.isRequired, 
-        getSingleMovie: PropTypes.func.isRequired, 
+        getMovieDetails: PropTypes.func.isRequired, 
         release_date: PropTypes.string.isRequired, 
         average_rating: PropTypes.number.isRequired
 }

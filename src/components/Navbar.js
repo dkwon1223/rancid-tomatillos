@@ -3,7 +3,7 @@ import TomatilloIcon from '../assets/tomatillo-icon.svg';
 import PropTypes from 'prop-types';
 
 export default function Navbar({ filteredMovies, setFilteredMovies }) {
-
+console.log(filteredMovies)
     return (
         <nav className="nav">
             <div className='nav-logo'> 
@@ -18,6 +18,6 @@ export default function Navbar({ filteredMovies, setFilteredMovies }) {
 }
 
 Navbar.propTypes = {
-    search: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-    setSearch: PropTypes.func.isRequired
+    filteredMovies: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+    setFilteredMovies: PropTypes.func.isRequired
 }
