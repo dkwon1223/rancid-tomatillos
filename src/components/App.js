@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import MoviesArea from '../components/MoviesArea';
 import MovieDetails from '../components/MovieDetails';
 import { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 
 export default function App() {
   const [movies, setMovies] = useState([])
@@ -11,7 +12,7 @@ export default function App() {
   const [error, setError] = useState('')
  
   function getAllMovies(){
-    fetch('https://racid-tomatillos.herokuapp.com/api/v2/movies')
+    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
     .then(response => response.json())
     .then(data => setMovies([...data.movies]))
     .catch(error => setError('Oops! Something went wrong. Please try again.'))
@@ -31,15 +32,24 @@ export default function App() {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${singleMovie.id}`)
     .then(response => response.json())
     .then(data => setMovie(data.movie))
+    .catch(error => setError('Unable to get movie details at this time. Please try again.'))
   }
 
   return (
     <main className='App'>
       <Navbar />
-      {details ? <MovieDetails movie={movie} returnToHome={returnToHome}/> : <MoviesArea getSingleMovie={getSingleMovie} movies={movies} />}
       {error && <h2>{error}</h2>}
+      {details ? <MovieDetails movie={movie} returnToHome={returnToHome}/> : <MoviesArea getSingleMovie={getSingleMovie} movies={movies} />}
     </main>
   )
 }
 
+MovieDetails.propTypes = {
+  movie: PropTypes.object.isRequired,
+  returnToHome: PropTypes.func.isRequired, 
+}
 
+MoviesArea.propTypes = {
+  getSingleMovie: PropTypes.func.isRequired, 
+  movies: PropTypes.array.isRequired
+}
