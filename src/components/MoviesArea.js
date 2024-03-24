@@ -3,7 +3,7 @@ import '../styles/MoviesArea.scss';
 import '../styles/MovieDetails.scss';
 import PropTypes from 'prop-types';
 
-function MoviesArea({ movies, getSingleMovie }){
+export default function MoviesArea({ getSingleMovie, movies }){
 
     const allMovies = movies.map(movie => {
         return (
@@ -35,4 +35,3 @@ Movie.propTypes = {
         average_rating: PropTypes.number.isRequired
 }
 
-export default MoviesArea; 

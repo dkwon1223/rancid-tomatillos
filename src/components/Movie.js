@@ -2,7 +2,7 @@ import '../styles/Movie.scss';
 import StarLogo from '../assets/star-icon.svg';
 import PropTypes from 'prop-types';
 
-function Movie({ posterPath, title, id, getSingleMovie, release_date, average_rating }){
+export default function Movie({ posterPath, title, id, getSingleMovie, release_date, average_rating }){
     return (
         <div className="movie-card" onClick={() => getSingleMovie(id)}>
             <img src={posterPath} className="movie-card-image"/>
@@ -26,4 +26,3 @@ Movie.propTypes = {
     average_rating: PropTypes.number.isRequired
 }
 
-export default Movie; 

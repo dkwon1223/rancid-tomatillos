@@ -9,7 +9,8 @@ export default function App() {
   const [movies, setMovies] = useState([])
   const [movie, setMovie] = useState({})
   const [details, setDetails] = useState(false);
-  const [error, setError] = useState('')
+  const [error, setError] = useState('');
+  const [search, setSearch] = useState('');
  
   function getAllMovies(){
     fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
@@ -35,11 +36,13 @@ export default function App() {
     .catch(error => setError('Unable to get movie details at this time. Please try again.'))
   }
 
+  let searchMovie = movies.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()))
+
   return (
     <main className='App'>
-      <Navbar />
+      <Navbar search={search} setSearch={setSearch}/>
       {error && <h2>{error}</h2>}
-      {details ? <MovieDetails movie={movie} returnToHome={returnToHome}/> : <MoviesArea getSingleMovie={getSingleMovie} movies={movies} />}
+      {details ? <MovieDetails movie={movie} returnToHome={returnToHome}/> : <MoviesArea getSingleMovie={getSingleMovie} movies={searchMovie} />}
     </main>
   )
 }
