@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 @mixin movie-area() {
@@ -35,6 +36,7 @@
     .movie-card-image {
         width: 95%;
         height: 85%;
+        border-radius: 10px; 
     }
     
     .movie-card-details {

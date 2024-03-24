@@ -22,4 +22,16 @@
     }
 }
 
+.search-bar {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    margin-right: 5%; 
+}
+
+.search-input {
+    width: 190px; 
+}
+
+
 

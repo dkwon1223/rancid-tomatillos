@@ -4,6 +4,8 @@
 .detail-container { 
   background-color: black;
   height: 100%;
+  background-color: black;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: end;
@@ -55,4 +57,30 @@
   .genre {
     margin: 0;
   }
+}
+
+.title {
+  font-size: 5vh; 
+  margin-bottom: 0; 
+  margin-top: 3%; 
+}
+
+.movie-overview {
+  width: 60%; 
+  margin-top: 1%; 
+}
+
+.tagline {
+  margin-top: .5%;
+  margin-bottom: 1.5%; 
+  font-style: italic;
+}
+
+button {
+  margin-bottom: 2%;
+  padding: .5%; 
+}
+
+p {
+  margin-top: 0; 
 }
