@@ -25,8 +25,18 @@ describe('Displaying single movie view', () => {
       }
     )
   })
+
   it('Should display the specific details of a single movie', () => {
     cy.get('h1').contains('Black Adam')
+    .get('p').contains("125 min | 2022")
+    .get('p').contains('Action - Fantasy - Science Fiction')
+    .get('h2').contains("The world needed a hero. It got Black Adam.")
+    .get('h3').contains("Budget")
+    .get('h3').contains("Revenue")
+    .get('.movie-overview').contains("Nearly 5,000 years")
+  })
+
+  it("Should return home from detailed movie view when button is clicked", () => {
     cy.get('button').click()
     .url().should('eq', 'http://localhost:3000/')
   })
