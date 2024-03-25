@@ -7,8 +7,8 @@ export default function MovieDetails({ returnToHome, movie }){
         <section className="detail-container">
             <article>
                 <p>{movie.runtime} min | {movie.release_date.slice(0,4)}</p>
-                <p>{movie.genres.join(" - ")}</p>
-                <h1>{movie.title}</h1>
+                <p className='genre'>{movie.genres.join(" - ")}</p>
+                <h1 className='title'>{movie.title}</h1>
                 <ReactStars 
                     className='movie-star-rating'
                     count={10}
@@ -19,7 +19,7 @@ export default function MovieDetails({ returnToHome, movie }){
                     size={25}
                 />
                 <h3>Budget: ${Intl.NumberFormat().format(movie.budget)} | Revenue: ${Intl.NumberFormat().format(movie.revenue)}</h3>
-                <h2>{movie.tagline}</h2>
+                <h2 className='tagline'>{movie.tagline}</h2>
                 <p className='movie-overview'>{movie.overview}</p>
                 <button onClick={returnToHome}>Back to Homepage</button> 
             </article>

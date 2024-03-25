@@ -4,36 +4,23 @@
 .detail-container { 
   background-color: black;
   height: 100%;
-  background-color: black;
-  height: 100%;
   width: 100%;
   display: flex;
-  justify-content: end;
-  img {
-    height: 100%;
-    width: 90%;
-    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.99) 100%);
-    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.99) 100%);
-  }
+  justify-content: flex-end;
   article {
     position: absolute;
-    left: 1%;
+    left: 2%;
     @include flex-centered-column();
     align-items: flex-start;
     width: 30%;
+    height: 90%;
+    text-align: left;
+  }
+  img {
     height: 100%;
-  }
-  .movie-star-rating {
-    height: 30px;
-    margin-bottom: 3%;
-  }
-  p {
-    margin: 1%;
-  }
-  h1 {
-    margin-top: 0;
-    margin-bottom: 5%;
-    font-size: xx-large;
+    width: 80%;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.99) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.99) 100%);
   }
   h2 {
     font-size: medium;
@@ -41,8 +28,8 @@
   h3 {
     font-size: medium;
   }
-  .movie-overview {
-    margin-bottom: 10%;
+  p {
+    margin-top: 0;
   }
   button {
     cursor: pointer;
@@ -52,35 +39,37 @@
     border-radius: 1rem;
     font-size: large;
     font-weight: 600;
-    width: 35%;
-  }
-  .genre {
-    margin: 0;
+    width: 30%;
+    margin-bottom: 2%;
+    padding: .5%;  
   }
 }
 
+.movie-star-rating {
+  height: 30px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
 .title {
   font-size: 5vh; 
   margin-bottom: 0; 
   margin-top: 3%; 
 }
-
 .movie-overview {
-  width: 60%; 
+  margin-bottom: 5%;
+  width: 90%; 
   margin-top: 1%; 
 }
-
+.genre {
+  margin: 0;
+}
 .tagline {
   margin-top: .5%;
   margin-bottom: 1.5%; 
   font-style: italic;
 }
 
-button {
-  margin-bottom: 2%;
-  padding: .5%; 
-}
 
-p {
-  margin-top: 0; 
-}
+
+
+
