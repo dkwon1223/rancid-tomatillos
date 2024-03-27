@@ -1,8 +1,34 @@
 import '../styles/MovieDetails.scss';
 import ReactStars from 'react-stars';
 import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
-export default function MovieDetails({ returnToHome, movie }){
+export default function MovieDetails({ setMovie, movie, setError, setErrorStatus}){
+
+    const detailedMovie = useParams();
+
+    useEffect(() => {
+        fetchMovie();
+    }, []);
+
+    const fetchMovie = async () => {
+        await fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${detailedMovie.movieId}`)
+            .then(response => {
+                if(!response.ok) {
+                setErrorStatus(response.status);
+                throw new Error(`Unable to retrieve movie - ID(${detailedMovie.movieId}). Try again later.`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                setMovie(data.movie);
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
+
     return (
         <section className="detail-container">
             <article>
@@ -21,16 +47,14 @@ export default function MovieDetails({ returnToHome, movie }){
                 <h3>Budget: ${Intl.NumberFormat().format(movie.budget)} | Revenue: ${Intl.NumberFormat().format(movie.revenue)}</h3>
                 <h2 className='tagline'>{movie.tagline}</h2>
                 <p className='movie-overview'>{movie.overview}</p>
-                <button onClick={returnToHome}>Back to Homepage</button> 
+                <button>Back to Homepage</button> 
             </article>
             <img src={movie.backdrop_path} className='detailed-backdrop-image'/>
         </section>
     )
-    
 }
 
 MovieDetails.propTypes = {
-    returnToHome: PropTypes.func.isRequired,
     movie: PropTypes.object.isRequired
 }
 
