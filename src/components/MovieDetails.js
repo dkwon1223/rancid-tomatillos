@@ -1,33 +1,14 @@
 import '../styles/MovieDetails.scss';
 import ReactStars from 'react-stars';
 import PropTypes from 'prop-types';
-import { useParams } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function MovieDetails({ setMovie, movie, setError, setErrorStatus}){
 
-    const detailedMovie = useParams();
 
-    useEffect(() => {
-        fetchMovie();
-    }, []);
-
-    const fetchMovie = async () => {
-        await fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${detailedMovie.movieId}`)
-            .then(response => {
-                if(!response.ok) {
-                setErrorStatus(response.status);
-                throw new Error(`Unable to retrieve movie - ID(${detailedMovie.movieId}). Try again later.`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                setMovie(data.movie);
-            })
-            .catch(error => {
-                setError(error.message);
-            })
-    }
+export default function MovieDetails(){
+    const data = useLoaderData();
+    const movie = data.movie;
 
     return (
         <section className="detail-container">
@@ -54,7 +35,9 @@ export default function MovieDetails({ setMovie, movie, setError, setErrorStatus
     )
 }
 
-MovieDetails.propTypes = {
-    movie: PropTypes.object.isRequired
+
+export const movieDetailsLoader = async ({ params }) => {
+    const res = await fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${params.movieId}`);
+    return res.json();
 }
 
