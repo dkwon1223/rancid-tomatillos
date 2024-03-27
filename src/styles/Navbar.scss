@@ -7,6 +7,7 @@
     margin-top: 0;
     background-color: $darker-red;
     display: flex;
+    color: white;
 }
 
 .nav-logo {
@@ -18,7 +19,7 @@
     img {
         width: 5%;
         transform: rotate(20deg);
-        margin-left: 2%; 
+        margin-left: 3%; 
     }
 }
 
@@ -26,11 +27,15 @@
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
-    margin-right: 5%; 
+    width: 12%;
+    margin-right: 4%; 
 }
 
 .search-input {
-    width: 190px; 
+    width: 100%; 
+    height: 30%;
+    border-radius: 1rem;
+    border: none;
 }
 
 

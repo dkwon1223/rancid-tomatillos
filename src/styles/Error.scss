@@ -1,0 +1,21 @@
+@import 'mixins';
+@import 'variables';
+
+.error-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: red;
+    font-size: x-large;
+    background-image: url('../assets/sad-tomatillo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: luminosity;
+    h1, h2 {
+        margin: 0;
+    }
+}
+
+
+

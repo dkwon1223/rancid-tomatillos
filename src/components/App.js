@@ -1,9 +1,11 @@
 import '../styles/App.scss';
+import { useState } from "react";
 import RootLayout from './RootLayout';
 import MoviesArea, { moviesLoader } from '../components/MoviesArea';
 import MovieDetails, { movieDetailsLoader } from '../components/MovieDetails';
-import ErrorMessage from './ErrorMessage';
-import { useState } from "react";
+import NotFound from './NotFound';
+import MoviesError from './MoviesError';
+import MovieDetailsError from './MovieDetailsError';
 
 import { 
   createBrowserRouter, 
@@ -14,7 +16,7 @@ import {
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
-  
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>}>
@@ -22,19 +24,20 @@ export default function App() {
           index 
           element={<MoviesArea searchQuery={searchQuery} />} 
           loader={ moviesLoader }
+          errorElement={<MoviesError />}
         />
         <Route 
-          exact path="/:movieId" 
+          path="/:movieId" 
           element={<MovieDetails />}
           loader={ movieDetailsLoader }
+          errorElement={<MovieDetailsError />}
         />
-        <Route path="*" element={<ErrorMessage />}/>
+        <Route path="*" element={<NotFound />}/>
       </Route>
     )
   )
   
   return (
-
     <RouterProvider router={router}/>
   )
 }

@@ -33,6 +33,11 @@ export default function MovieDetails(){
 
 export const movieDetailsLoader = async ({ params }) => {
     const res = await fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${params.movieId}`);
+    
+    if(!res.ok) {
+        throw new Error(`Unable to load movie ID:${params.id}. Try again later.`)
+    }
+    
     return res.json();
 }
 

@@ -4,6 +4,7 @@
 .movie-container {
     @include movie-area();
     height: 85%;
+    width: 95%;
     overflow-y: auto;
 }
 
