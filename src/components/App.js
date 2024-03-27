@@ -1,19 +1,20 @@
 import '../styles/App.scss';
 import RootLayout from './RootLayout';
-import Navbar from '../components/Navbar';
 import MoviesArea, { moviesLoader } from '../components/MoviesArea';
 import MovieDetails, { movieDetailsLoader } from '../components/MovieDetails';
 import ErrorMessage from './ErrorMessage';
-import { useState, useEffect } from "react";
-import PropTypes from 'prop-types';
+import { useState } from "react";
+
 import { 
   createBrowserRouter, 
   createRoutesFromElements, 
-  Route, RouterProvider, 
+  Route, 
+  RouterProvider, 
 } from 'react-router-dom';
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
+  
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>}>

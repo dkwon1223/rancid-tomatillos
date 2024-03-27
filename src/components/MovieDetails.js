@@ -1,10 +1,6 @@
 import '../styles/MovieDetails.scss';
 import ReactStars from 'react-stars';
-import PropTypes from 'prop-types';
-import { useLoaderData } from 'react-router-dom';
-import { useEffect } from 'react';
-
-
+import { Link, useLoaderData } from 'react-router-dom';
 
 export default function MovieDetails(){
     const data = useLoaderData();
@@ -28,13 +24,12 @@ export default function MovieDetails(){
                 <h3>Budget: ${Intl.NumberFormat().format(movie.budget)} | Revenue: ${Intl.NumberFormat().format(movie.revenue)}</h3>
                 <h2 className='tagline'>{movie.tagline}</h2>
                 <p className='movie-overview'>{movie.overview}</p>
-                <button>Back to Homepage</button> 
+                <Link to={"/"}><button>Back to Homepage</button> </Link>
             </article>
             <img src={movie.backdrop_path} className='detailed-backdrop-image'/>
         </section>
     )
 }
-
 
 export const movieDetailsLoader = async ({ params }) => {
     const res = await fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${params.movieId}`);

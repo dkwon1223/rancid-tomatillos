@@ -1,6 +1,5 @@
 import '../styles/Navbar.scss';
 import TomatilloIcon from '../assets/tomatillo-icon.svg';
-import PropTypes from 'prop-types';
 
 export default function Navbar({ searchQuery, setSearchQuery }) {
     return (
@@ -16,7 +15,3 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
     )
 }
 
-// Navbar.propTypes = {
-//     filteredMovies: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-//     setFilteredMovies: PropTypes.func.isRequired
-// }

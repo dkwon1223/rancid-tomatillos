@@ -1,7 +1,6 @@
 
 import '../styles/MoviesArea.scss';
 import '../styles/MovieDetails.scss';
-import '../styles/Movie.scss';
 import StarLogo from '../assets/star-icon.svg';
 import { useLoaderData, Link } from 'react-router-dom';
 
