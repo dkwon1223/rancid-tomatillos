@@ -21,18 +21,18 @@ export default function App() {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>}>
         <Route 
-          index 
+          index
           element={<MoviesArea searchQuery={searchQuery} />} 
           loader={ moviesLoader }
           errorElement={<MoviesError />}
         />
-        <Route 
-          path="/:movieId" 
+        <Route
+          path="/movies/:movieId" 
           element={<MovieDetails />}
           loader={ movieDetailsLoader }
           errorElement={<MovieDetailsError />}
         />
-        <Route path="*" element={<NotFound />}/>
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   )

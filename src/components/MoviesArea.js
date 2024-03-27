@@ -15,7 +15,7 @@ export default function MoviesArea({searchQuery}){
 
     const moviesToRender = movies.map(movie => {
         return (
-            <Link to={`/${movie.id}`} key={movie.id}>
+            <Link to={`/movies/${movie.id}`} key={movie.id}>
                 <div className="movie-card" >
                     <img src={movie.poster_path} className="movie-card-image"/>
                     <aside className="movie-card-details">
