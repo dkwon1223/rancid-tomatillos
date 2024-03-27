@@ -41,7 +41,7 @@ export const moviesLoader = async () => {
     const res = await fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies");
 
     if(!res.ok) {
-        throw new Error("Could not load movies. Try again later.")
+        throw new Error(`Could not load movies. Try again later.`)
     }
 
     return res.json();
