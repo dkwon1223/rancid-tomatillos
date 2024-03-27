@@ -3,6 +3,7 @@ import '../styles/MoviesArea.scss';
 import '../styles/MovieDetails.scss';
 import StarLogo from '../assets/star-icon.svg';
 import { useLoaderData, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default function MoviesArea({searchQuery}){
     const data = useLoaderData();
@@ -16,7 +17,7 @@ export default function MoviesArea({searchQuery}){
     const moviesToRender = movies.map(movie => {
         return (
             <Link to={`/movies/${movie.id}`} key={movie.id}>
-                <div className="movie-card" >
+                <div className="movie-card">
                     <img src={movie.poster_path} className="movie-card-image"/>
                     <aside className="movie-card-details">
                         <h2>{movie.title} ({movie.release_date.slice(0,4)})</h2>
@@ -45,4 +46,8 @@ export const moviesLoader = async () => {
     }
 
     return res.json();
+}
+
+MoviesArea.propTypes = {
+    searchQuery: PropTypes.string
 }

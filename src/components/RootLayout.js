@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
-import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default function RootLayout({searchQuery, setSearchQuery}) {
 
@@ -15,3 +16,9 @@ export default function RootLayout({searchQuery, setSearchQuery}) {
     </div>
   )
 }
+
+RootLayout.propTypes = {
+  searchQuery: PropTypes.string,
+  setSearchQuery: PropTypes.func
+}
+

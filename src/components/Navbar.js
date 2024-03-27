@@ -1,5 +1,6 @@
 import '../styles/Navbar.scss';
 import TomatilloIcon from '../assets/tomatillo-icon.svg';
+import PropTypes from 'prop-types';
 
 export default function Navbar({ searchQuery, setSearchQuery }) {
     return (
@@ -13,5 +14,10 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
             </div>               
         </nav>
     )
+}
+
+Navbar.propTypes = {
+    searchQuery: PropTypes.string,
+    setSearchQuery: PropTypes.func
 }
 
