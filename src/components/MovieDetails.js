@@ -1,33 +1,10 @@
 import '../styles/MovieDetails.scss';
 import ReactStars from 'react-stars';
-import PropTypes from 'prop-types';
-import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
 
-export default function MovieDetails({ setMovie, movie, setError, setErrorStatus}){
-
-    const detailedMovie = useParams();
-
-    useEffect(() => {
-        fetchMovie();
-    }, []);
-
-    const fetchMovie = async () => {
-        await fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${detailedMovie.movieId}`)
-            .then(response => {
-                if(!response.ok) {
-                setErrorStatus(response.status);
-                throw new Error(`Unable to retrieve movie - ID(${detailedMovie.movieId}). Try again later.`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                setMovie(data.movie);
-            })
-            .catch(error => {
-                setError(error.message);
-            })
-    }
+export default function MovieDetails(){
+    const data = useLoaderData();
+    const movie = data.movie;
 
     return (
         <section className="detail-container">
@@ -47,14 +24,20 @@ export default function MovieDetails({ setMovie, movie, setError, setErrorStatus
                 <h3>Budget: ${Intl.NumberFormat().format(movie.budget)} | Revenue: ${Intl.NumberFormat().format(movie.revenue)}</h3>
                 <h2 className='tagline'>{movie.tagline}</h2>
                 <p className='movie-overview'>{movie.overview}</p>
-                <button>Back to Homepage</button> 
+                <Link to={"/"}><button>Back to Homepage</button> </Link>
             </article>
             <img src={movie.backdrop_path} className='detailed-backdrop-image'/>
         </section>
     )
 }
 
-MovieDetails.propTypes = {
-    movie: PropTypes.object.isRequired
+export const movieDetailsLoader = async ({ params }) => {
+    const res = await fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${params.movieId}`);
+    
+    if(!res.ok) {
+        throw new Error(`Unable to load movie. Try again later.`)
+    }
+    
+    return res.json();
 }
 

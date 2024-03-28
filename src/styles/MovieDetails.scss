@@ -39,11 +39,16 @@
     border-radius: 1rem;
     font-size: large;
     font-weight: 600;
-    width: 30%;
+    width: 100%;
     margin-bottom: 2%;
     padding: .5%;  
   }
 }
+
+.movie-card {
+  @include movie-card();
+}
+
 
 .movie-star-rating {
   height: 30px;
