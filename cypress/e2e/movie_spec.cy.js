@@ -60,9 +60,4 @@ describe('Displaying single movie view', () => {
     .get('h3').contains("Revenue")
     .get('.movie-overview').contains("Nearly 5,000 years")
   })
-
-  // it("Should return home from detailed movie view when button is clicked", () => {
-  //   cy.get('button').click()
-  //   .url().should('eq', 'http://localhost:3000/')
-  // })
 })
