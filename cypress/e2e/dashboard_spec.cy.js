@@ -43,4 +43,17 @@ describe('Loading the homepage', () => {
     .get('.movie-container').contains('h3', '5')
     .get('h2').should('not.contain', 'Black Adam')
   })
-})
+//   it('should inform user of error if cannot retrieve movies', () => {
+//     cy.intercept({
+//       method: 'GET',
+//       url: 'http://localhost:3001/'
+//     },
+//     {
+//       statusCode: 404,
+//       body: {
+//         message: `404 Page not found!`
+//       }
+//     })
+// })
+  }
+  )
