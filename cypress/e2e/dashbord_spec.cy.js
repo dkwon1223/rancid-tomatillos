@@ -35,4 +35,12 @@ describe('Loading the homepage', () => {
     .get('.movie-card').contains("Black").click()
     .url().should('eq', 'http://localhost:3000/')
   })
+
+  it('Should filter movies based on search input', () => {
+    cy.get('input[type=search').type('Cool')
+    .get('.movie-container').contains('h2', 'Cool Adam')
+    .get('.movie-container').contains('h2', '2022')
+    .get('.movie-container').contains('h3', '5')
+    .get('h2').should('not.contain', 'Black Adam')
+  })
 })
