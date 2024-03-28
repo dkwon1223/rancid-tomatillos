@@ -17,7 +17,7 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
 }
 
 Navbar.propTypes = {
-    searchQuery: PropTypes.string,
-    setSearchQuery: PropTypes.func
+    searchQuery: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+    setSearchQuery: PropTypes.func.isRequired
 }
 

@@ -1,4 +1,3 @@
-
 import '../styles/MoviesArea.scss';
 import '../styles/MovieDetails.scss';
 import StarLogo from '../assets/star-icon.svg';
@@ -49,5 +48,5 @@ export const moviesLoader = async () => {
 }
 
 MoviesArea.propTypes = {
-    searchQuery: PropTypes.string
+    searchQuery: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
 }
