@@ -35,4 +35,25 @@ describe('Loading the homepage', () => {
     .get('.movie-card').contains("Black").click()
     .url().should('eq', 'http://localhost:3000/')
   })
-})
+
+  it('Should filter movies based on search input', () => {
+    cy.get('input[type=search').type('Cool')
+    .get('.movie-container').contains('h2', 'Cool Adam')
+    .get('.movie-container').contains('h2', '2022')
+    .get('.movie-container').contains('h3', '5')
+    .get('h2').should('not.contain', 'Black Adam')
+  })
+//   it('should inform user of error if cannot retrieve movies', () => {
+//     cy.intercept({
+//       method: 'GET',
+//       url: 'http://localhost:3001/'
+//     },
+//     {
+//       statusCode: 404,
+//       body: {
+//         message: `404 Page not found!`
+//       }
+//     })
+// })
+  }
+  )
