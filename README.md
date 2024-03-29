@@ -7,6 +7,15 @@ Welcome to Rancid Tomatillos! Here you can browse a catalog of movies of interes
 [David Kwon](https://github.com/dkwon1223)
 [Erin Kelley](https://github.com/kelleyej)
 
+## 🎥 Preview 
+
+
+
+https://github.com/dkwon1223/rancid-tomatillos/assets/120286689/b1fb28d3-a012-440c-9334-a658e27147a3
+
+
+
+
 ## 🎥 Installation Instructions 
   1. Fork repository
   2. Clone repository onto your local machine
