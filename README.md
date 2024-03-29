@@ -38,7 +38,7 @@ Welcome to Rancid Tomatillos! Here you can browse a catalog of movies of interes
  - Additional search/sorting functionality in the NavBar component 
    - Sort movies by release date(ascending/descending)
    - Sort movies by rating(ascending/descending)
-   - Sort movies by genre
+   - Sort movies by genre(drop down of available genres)
     
  - Implement a controlled login form component that validates and keeps track of users. 
    - Further iterations of user functionality could also include:
