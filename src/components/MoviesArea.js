@@ -38,13 +38,15 @@ export default function MoviesArea({searchQuery}){
 }
 
 export const moviesLoader = async () => {
-    const res = await fetch("https://rancid-tomatillos.herokuapp.com/api/v2/moies");
-
-    if(!res.ok) {
+    const res = await fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies");
+    try {
+        if(!res.ok) {
         throw new Error(`Could not load movies. Try again later.`)
+        }
+    return res.json(); 
+    } catch(error) {
+        throw error; 
     }
-
-    return res.json();
 }
 
 MoviesArea.propTypes = {
