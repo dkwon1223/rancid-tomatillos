@@ -1,6 +1,7 @@
 # Rancid Tomatillos 🍅
 
 ## 🎥 Abstract
+Welcome to Rancid Tomatillos! Here you can browse a catalog of movies of interest. Can't seem to find the one you are looking for? Don't fret. You can simply type any movie title in the search bar and quickly see the results. If you find a movie that interests you, you can click on it to get more details, such as the genres, runtime, overview, budget, and the year it was released. A dream for any movie enthusiast! 
 
 ## 🎥 Contributors 
 [David Kwon](https://github.com/dkwon1223)
