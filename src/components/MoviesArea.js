@@ -42,14 +42,11 @@ export const moviesLoader = async () => {
     try {
         if(!res.ok) {
         throw new Error(`Could not load movies. Try again later.`)
-    }
-
+        }
     return res.json(); 
     } catch(error) {
-        console.log('test this')
         throw error; 
     }
-   
 }
 
 MoviesArea.propTypes = {
