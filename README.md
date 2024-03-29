@@ -43,4 +43,5 @@ Welcome to Rancid Tomatillos! Here you can browse a catalog of movies of interes
  - Implement a controlled login form component that validates and keeps track of users. 
    - Further iterations of user functionality could also include:
      - Custom reviews/ratings
+     - Custom bookmarks and user collections(watched movies/favorited movies)
      - The ability to add more movies
