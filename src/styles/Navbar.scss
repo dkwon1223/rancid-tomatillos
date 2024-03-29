@@ -21,13 +21,18 @@
         transform: rotate(20deg);
         margin-left: 3%; 
     }
+    @media screen and (max-width: 767px) {
+        h1 {
+            font-size: small;
+        }
+    }
 }
 
 .search-bar {
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
-    width: 16%;
+    width: 25%;
     margin-right: 4%; 
 }
 
@@ -36,9 +41,26 @@
     height: 40%;
     border-radius: 1rem;
     border: none;
-    font-size: larger;
+    font-size: large;
     text-align: center;
 }
+
+@media screen and (max-width: 1024px) {
+    .search-bar {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .search-bar {
+        width: 200%;
+    }
+    .search-input {
+        font-size: x-small;
+        width: 100%;
+    }
+}
+
 
 
 
