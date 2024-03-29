@@ -1,7 +1,7 @@
 # Rancid Tomatillos 🍅
 
 ## 🎥 Abstract
-Welcome to Rancid Tomatillos! Here you can browse a catalog of movies of interest. Can't seem to find the one you are looking for? Don't fret. You can simply type any movie title in the search bar and quickly see the results. If you find a movie that interests you, you can click on it to get more details, such as the genres, runtime, overview, budget, and the year it was released. A dream for any movie enthusiast! 
+Welcome to Rancid Tomatillos! Here you can browse a catalog of movies of interest. Tired of scrolling to find the movie you are looking for? Don't fret. You can simply type any movie title in the search bar and quickly see the results. If you find a movie that intrigues you, you can click on it to get more details, such as the genres, runtime, overview, budget, and the year it was released. A dream for any movie enthusiast! 
 
 ## 🎥 Contributors 
 [David Kwon](https://github.com/dkwon1223)
@@ -14,7 +14,14 @@ Welcome to Rancid Tomatillos! Here you can browse a catalog of movies of interes
 
 ## 🎥 Context
  - 🎬 Goals:
+   - Gain competency with React fundamentals.
+   - Test React components & asynchronous JS with Cypress.
+   - Create a multi-page UX using Router.
  - 🎬 Wins:
+   - Created our first React App!
+   - Utilized the project board to create user stories and thorough acceptance criteria.
+   - Successfully stubbed network requests with Cypress.
+   - Utilized Proptypes to type-check props.
  - 🎬 Challenges:
 
 ## 🎥 Future Improvements
