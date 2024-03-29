@@ -21,6 +21,11 @@
         transform: rotate(20deg);
         margin-left: 3%; 
     }
+    @media screen and (max-width: 767px) {
+        h1 {
+            font-size: small;
+        }
+    }
 }
 
 .search-bar {
@@ -45,5 +50,17 @@
         width: 50%;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .search-bar {
+        width: 200%;
+    }
+    .search-input {
+        font-size: x-small;
+        width: 100%;
+    }
+}
+
+
 
 

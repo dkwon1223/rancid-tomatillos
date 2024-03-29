@@ -15,11 +15,14 @@
 @mixin movie-area() {
     margin-top: 5%;
     height: 100vh;
-    width: 95%;
+    width: 95vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 0;
     background-color: $background-grey;
+    @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @mixin movie-card() {
@@ -66,6 +69,14 @@
             }
             h2 {
                 width: 70%;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            h2, h3 {
+                font-size: xx-small;
+            }
+            h2 {
+                width: 80%;
             }
         }
     }
