@@ -11,6 +11,11 @@
   overflow-y: auto;
 }
 
+header {
+  display: flex;
+  height: 10%;
+}
+
 a {
   color: inherit;
   text-decoration: none !important;
