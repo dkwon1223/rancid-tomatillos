@@ -18,7 +18,7 @@ export default function RootLayout({searchQuery, setSearchQuery}) {
 }
 
 RootLayout.propTypes = {
-  searchQuery: PropTypes.string,
-  setSearchQuery: PropTypes.func
+  searchQuery: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  setSearchQuery: PropTypes.func.isRequired
 }
 

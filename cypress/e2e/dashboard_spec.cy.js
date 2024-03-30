@@ -33,5 +33,5 @@ describe('Loading the homepage', () => {
     .get('.movie-container').contains('h3', '7')
     .get('h2').should('not.contain', 'Black Adam')
   })
-  }
-  )
+})
+
