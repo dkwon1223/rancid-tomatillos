@@ -43,6 +43,7 @@ export const moviesLoader = async () => {
         if(!res.ok) {
         throw new Error(`Could not load movies. Try again later.`)
         }
+        
     return res.json(); 
     } catch(error) {
         throw error; 
