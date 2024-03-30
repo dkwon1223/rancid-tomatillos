@@ -22,6 +22,8 @@ https://github.com/dkwon1223/rancid-tomatillos/assets/120286689/b1fb28d3-a012-44
   3. `cd` into root directory of repository
   4. Run `npm install` to install project dependencies
   5. Run `npm start` to start the local server and navigate to localhost:3000
+OR 
+Visit the live deployed [link](https://rancid-tomatillos-omega.vercel.app/)
 
 ## 🎥 Technologies Used 
 ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat) ![Sass Badge](https://img.shields.io/badge/Sass-C69?logo=sass&logoColor=fff&style=flat) ![React Router Badge](https://img.shields.io/badge/React%20Router-CA4245?logo=reactrouter&logoColor=fff&style=flat) ![Cypress Badge](https://img.shields.io/badge/Cypress-69D3A7?logo=cypress&logoColor=fff&style=flat)
